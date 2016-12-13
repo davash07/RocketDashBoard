@@ -22,6 +22,23 @@
         setTimeout(function(){
             window.location.reload();
         }, 32000);
+        /*swal.queue([{
+            title: 'Your public IP',
+            confirmButtonText: 'Show my public IP',
+            text:
+            'Your public IP will be received ' +
+            'via AJAX request',
+            showLoaderOnConfirm: true,
+            preConfirm: function () {
+                return new Promise(function (resolve) {
+                    $.get('https://people.zoho.com/people/api/forms/P_TimesheetJobsList/getRecords?authtoken=6a701202eb76ebf85132b6ba39f6831d')
+                        .done(function (data) {
+                            swal.insertQueueStep(data.response.result)
+                            resolve()
+                        })
+                })
+            }
+        }]); */
         $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data) {
              if (data.card != null){
                  var audio = new Audio('sound.mp3');
@@ -29,8 +46,7 @@
                  swal({
                      title: data.card.name_board,
                      type: 'error',
-                     text:
-                     'Se ha incluido un nuevo bug',
+                     text: 'Se ha incluido un nuevo bug' ,
                      timer: 10000
 
                  }).then(
@@ -41,8 +57,9 @@
                          }
                      }
                  );
-                // alert( data.card.members[0].fullname);
-                // alert();
+                //  alert('dasdas');
+                //  alert( data.card.members[0].fullname);
+                // // alert();alert
             }
         });
 
@@ -185,7 +202,6 @@
                 $scope.poll();
             });
         }
-
         function loadCards() {
             $scope.loadingCards = true;
             Trello.get("boards/"+ $scope.quadroDefault + "/cards/", function (cards){
@@ -194,7 +210,6 @@
                 $scope.poll();
             });
         }
-
         $scope.fresh = function(){
             load();
         };
@@ -203,7 +218,5 @@
                 console.log('poll');
             }, 100);
         };
-
-        //
     }]);
 })();
