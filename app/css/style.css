@@ -52,5 +52,14 @@ body{
 .Title p{
     font-size: 60px;
 }
-
+.indicadorver{
+    margin-left: -45px;
+    margin-top: 95px;
+    position: fixed;
+}
+.text-inicio{
+    margin-top:40px;
+    float:left;
+    margin-left: -85px;
+}
 

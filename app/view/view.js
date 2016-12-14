@@ -54,7 +54,7 @@
             alert(response.data);
         });
         $scope.reload = function () {
-            $http.get('https://api.sundevs.com/api/v1/cards/show').success(function (data) {
+            $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data) {
                 if (data.card != null){
                     var audio = new Audio('sound.mp3');
                     audio.play();
@@ -82,7 +82,7 @@
 
             $timeout(function(){
                 $scope.reload();
-            },3000000)
+            },3000)
         };
         $scope.reload();
 
@@ -90,7 +90,7 @@
         $scope.urlsimgs= "&authtoken=6a701202eb76ebf85132b6ba39f6831d";
         $scope.listOfCustomers = null;
 
-        $http.get('https://people.zoho.com/people/api/forms/P_TimesheetJobsList/getRecords?authtoken=6a701202eb76ebf85132b6ba39f6831d')
+        $http.get('http://people.zoho.com/people/api/forms/P_TimesheetJobsList/getRecords?authtoken=6a701202eb76ebf85132b6ba39f6831d')
             .success(function (data) {
                 $scope.listOfCustomers = data.response.result;
 
