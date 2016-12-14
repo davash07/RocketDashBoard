@@ -23,7 +23,7 @@ body{
     color: rgba(255,255,255, 0.5);
 }
 .ProgressProject{
-    margin-top: 3%;
+    margin-top: 8%;
 }
 .barr2{
     margin-top: -2%;
@@ -34,7 +34,7 @@ body{
     color: rgba(255,255,255, 0.5);
 }
 .slider-carousel{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .bar{
     height: 90px;
@@ -58,8 +58,45 @@ body{
     position: fixed;
 }
 .text-inicio{
-    margin-top:40px;
-    float:left;
-    margin-left: -85px;
+    margin-top: -70px;
+    margin-left: 5px;
+    color: #e7e7e7;
 }
-
+#diainicio{
+    font-size: 35px;
+}
+#mesinicio{
+    font-size: 25px;
+}
+.indicadornar{
+    position:absolute;
+    margin-left:-40px;
+    margin-top: -100px;
+}
+.text-reto{
+    margin-top:-70px;
+    color: #e7e7e7;
+}
+#diareto {
+    font-size: 35px;
+}
+#mesreto{
+    font-size: 25px;
+}
+.indicadorro{
+    float: right;
+    margin-right:-40px;
+    margin-top: -15px;
+}
+.text-fin{
+    margin-top:-80px;
+    color: #e7e7e7;
+    text-align: center;
+}
+#diafin{
+    font-size: 35px;
+}
+#mesfin{
+    font-size: 25px;
+    margin-top: -20px;
+}
