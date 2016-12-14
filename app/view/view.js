@@ -41,9 +41,20 @@
             }
         }]); */
 
-
+        $scope.url = "https://people.zoho.com/people/api/forms/P_TimesheetJobsList/getRecords?authtoken=6a701202eb76ebf85132b6ba39f6831d";
+        $http({
+            method: 'jsonp',
+            url: $scope.url,
+            params: {
+                format: 'jsonp',
+                name: 'Super Hero',
+                callback: 'JSON_CALLBACK'
+            }
+        }).then(function (response) {
+            alert(response.data);
+        });
         $scope.reload = function () {
-            $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data) {
+            $http.get('https://api.sundevs.com/api/v1/cards/show').success(function (data) {
                 if (data.card != null){
                     var audio = new Audio('sound.mp3');
                     audio.play();
@@ -71,16 +82,18 @@
 
             $timeout(function(){
                 $scope.reload();
-            },3000)
+            },3000000)
         };
         $scope.reload();
 
 
         $scope.urlsimgs= "&authtoken=6a701202eb76ebf85132b6ba39f6831d";
         $scope.listOfCustomers = null;
+
         $http.get('https://people.zoho.com/people/api/forms/P_TimesheetJobsList/getRecords?authtoken=6a701202eb76ebf85132b6ba39f6831d')
             .success(function (data) {
                 $scope.listOfCustomers = data.response.result;
+
             }).error(function () {
             });
         $http.get('apizoho.json').success(function(data) {
@@ -232,4 +245,9 @@
             }, 100);
         };
     }]);
+    app.config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    }]);
+
 })();
