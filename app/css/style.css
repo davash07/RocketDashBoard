@@ -2,11 +2,11 @@ body{
     background-color: #222222;
 }
 .ImgProject img{
-    width: 300px;
+    width: 80%;
 }
 
 .TitleProject p{
-    font-size: 50px;
+    font-size: 8rem;
     color: rgba(255,255,255, 0.5);
     margin-top: -10px;
 }
@@ -23,7 +23,7 @@ body{
     color: rgba(255,255,255, 0.5);
 }
 .ProgressProject{
-    margin-top: 5%;
+    margin-top: 3%;
 }
 .barr2{
     margin-top: -2%;
@@ -37,7 +37,11 @@ body{
     margin-top: 10%;
 }
 .bar{
-    height: 80px;
+    height: 90px;
+}
+.barr{
+    height: 120px;
+    background-color: transparent;
 }
 .indicador{
     margin-top: 3%;
@@ -45,4 +49,8 @@ body{
 .CantBugs, .Title{
     text-align: center;
 }
+.Title p{
+    font-size: 60px;
+}
+
 
