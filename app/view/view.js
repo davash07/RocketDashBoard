@@ -19,9 +19,10 @@
         // $http.post('http://api.sundevs.com/api/v1/trellomodels/create', JSON.stringify(data)).then(function (data) {
         //
         // });
+        /*
         setTimeout(function(){
             window.location.reload();
-        }, 32000);
+        }, 32000);*/
         /*swal.queue([{
             title: 'Your public IP',
             confirmButtonText: 'Show my public IP',
@@ -39,29 +40,41 @@
                 })
             }
         }]); */
-        $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data) {
-             if (data.card != null){
-                 var audio = new Audio('sound.mp3');
-                 audio.play();
-                 swal({
-                     title: data.card.name_board,
-                     type: 'error',
-                     text: 'Se ha incluido un nuevo bug' ,
-                     timer: 10000
 
-                 }).then(
-                     function () {},
-                     function (dismiss) {
-                         if (dismiss === 'timer') {
-                             console.log('I was closed by the timer')
-                         }
-                     }
-                 );
-                //  alert('dasdas');
-                //  alert( data.card.members[0].fullname);
-                // // alert();alert
-            }
-        });
+
+        $scope.reload = function () {
+            $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data) {
+                if (data.card != null){
+                    var audio = new Audio('sound.mp3');
+                    audio.play();
+                    swal({
+                        title: data.card.name_board,
+                        type: 'error',
+                        text: 'Se ha incluido un nuevo bug' ,
+                        timer: 10000
+
+                    }).then(
+                        function () {},
+                        function (dismiss) {
+                            if (dismiss === 'timer') {
+                                console.log('I was closed by the timer')
+                            }
+                        }
+                    );
+                    //  alert('dasdas');
+                    //  alert( data.card.members[0].fullname);
+                    // // alert();alert
+                }
+
+
+            });
+
+            $timeout(function(){
+                $scope.reload();
+            },3000)
+        };
+        $scope.reload();
+
 
         $scope.urlsimgs= "&authtoken=6a701202eb76ebf85132b6ba39f6831d";
         $scope.listOfCustomers = null;
