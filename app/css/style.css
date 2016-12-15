@@ -17,13 +17,10 @@ body{
     text-align: left;
     color: rgba(255,255,255, 0.5);
 }
-.BugsProject span{
-    text-align: center;
-    font-size: 30px;
-    color: rgba(255,255,255, 0.5);
-}
+
 .ProgressProject{
     margin-top: 8%;
+    background-color: transparent;
 }
 .barr2{
     margin-top: -2%;
