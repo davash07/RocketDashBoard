@@ -19,6 +19,9 @@
         $scope.reload = function () {
             $.ajax({
                 type: "GET",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
                 data: JSON.stringify(data),
                 url: "http://api.sundevs.com/api/v1/cards/quantity",
                 contentType: "application/json",
