@@ -18,23 +18,24 @@
         // });
         $scope.reload = function () {
 
-            $http({
-                method: 'GET',
-                url: 'http://api.sundevs.com/api/v1/cards/quantity'
-            }).success(function(data){
-                $scope.quantity = data;
-            });
-
-
-            // $.ajax({
-            //     type: "GET",
-            //     data: JSON.stringify(data),
-            //     url: "http://api.sundevs.com/api/v1/cards/quantity",
-            //     contentType: "application/json",
-            //     success: function(data) {
-            //         $scope.quantity = data;
-            //     }
+            // $http({
+            //     method: 'GET',
+            //     url: 'http://api.sundevs.com/api/v1/cards/quantity'
+            // }).success(function(data){
+            //     $scope.quantity = data;
             // });
+
+
+            $.ajax({
+                type: "GET",
+                data: JSON.stringify(data),
+                headers: {"X-My-Custom-Header": "some value"},
+                url: "http://api.sundevs.com/api/v1/cards/quantity",
+                contentType: "application/json",
+                success: function(data) {
+                    $scope.quantity = data;
+                }
+            });
             // $http.get('http://api.sundevs.com/api/v1/cards/quantity').success(function (data, req, res) {
             //     res.header('Access-Control-Allow-Origin', "*");
             //     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
