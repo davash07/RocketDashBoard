@@ -33,11 +33,9 @@
                 data: JSON.stringify(data),
                 url: "http://api.sundevs.com/api/v1/cards/quantity",
                 contentType: "application/json",
+                cache: false,
                 success: function(data) {
                     $scope.quantity = data;
-                },
-                error:function (data) {
-                    alert(data);
                 }
             });
             // $http.get('http://api.sundevs.com/api/v1/cards/quantity').success(function (data, req, res) {
