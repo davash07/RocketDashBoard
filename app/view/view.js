@@ -32,7 +32,9 @@
                 dataType: 'json',
                 processData: true,
                 async: false,
-                headers: {"X-My-Custom-Header": "some value"},
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                },
                 url: "http://api.sundevs.com/api/v1/cards/quantity",
                 contentType: "application/json",
                 success: function(data) {
