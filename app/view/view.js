@@ -31,11 +31,10 @@
             $.ajax({
                 type: "GET",
                 data: JSON.stringify(data),
-                url: "https://api.trello.com/1/tokens/c4a90c8735f980c1257a90a8c205c03f58c971dc21aade2c3f6b66de1f6e8d1c/webhooks/?key=c8b7f2e9a6f82f88b47f767ed2122822",
+                url: "http://api.sundevs.com/api/v1/cards/quantity",
                 contentType: "application/json",
                 success: function(data) {
-                    alert(data);
-                    // $scope.quantity = data;
+                    $scope.quantity = data;
                 }
             });
             // $http.get('http://api.sundevs.com/api/v1/cards/quantity').success(function (data, req, res) {
