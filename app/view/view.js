@@ -20,7 +20,7 @@
             $.ajax({
                 type: "GET",
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Access-Control-Allow-Origin' : 'https://davash07.github.io/'
                 },
                 data: JSON.stringify(data),
                 url: "http://api.sundevs.com/api/v1/cards/quantity",
