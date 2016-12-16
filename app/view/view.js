@@ -9,14 +9,23 @@
         $scope.CurrentDate = new Date();
         var token = '7624c37e41770770d71000f7f2dc13b9b1647cbb6bbe1c1ff28e214a0564fb5b';
         $http.get('https://api.trello.com/1/tokens/c4a90c8735f980c1257a90a8c205c03f58c971dc21aade2c3f6b66de1f6e8d1c/webhooks/?key=c8b7f2e9a6f82f88b47f767ed2122822')
-        .success(function (data) {
+        .success(function (data, req, res) {
             $scope.datos = data;
+            res.header('Access-Control-Allow-Origin', "https://davash07.github.io/");
+            res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+            res.header('Access-Control-Allow-Headers', 'Content-Type');
         });
         $scope.reload = function () {
-            $http.get('http://api.sundevs.com/api/v1/cards/quantity').success(function (data) {
+            $http.get('http://api.sundevs.com/api/v1/cards/quantity').success(function (data, req, res) {
+                res.header('Access-Control-Allow-Origin', "https://davash07.github.io/");
+                res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+                res.header('Access-Control-Allow-Headers', 'Content-Type');
                 $scope.quantity = data;
             });
-            $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data) {
+            $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data,req, res) {
+                res.header('Access-Control-Allow-Origin', "https://davash07.github.io/");
+                res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+                res.header('Access-Control-Allow-Headers', 'Content-Type');
                 if (data.card != null){
                     var audio = new Audio('sound.mp3');
                     audio.play();
