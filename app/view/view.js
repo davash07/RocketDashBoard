@@ -17,11 +17,20 @@
         //     res.send(200);
         // });
         $scope.reload = function () {
+
+            // $http({
+            //     method: 'JSONP',
+            //     url: 'http://api.sundevs.com/api/v1/cards/quantity',
+            //     cache: false,
+            //     success: function (data) {
+            //         $scope.quantity = data;
+            //
+            //     }
+            // });
+
             $.ajax({
                 type: "GET",
-                headers: {
-                    'Access-Control-Allow-Origin' : 'https://davash07.github.io/'
-                },
+                async: true,
                 data: JSON.stringify(data),
                 url: "http://api.sundevs.com/api/v1/cards/quantity",
                 contentType: "application/json",
