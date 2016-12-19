@@ -2,6 +2,7 @@
     var app = angular.module('app',[
         'ui.bootstrap']);
     app.controller('AppCtrl', ['$scope','$timeout', '$http', function($scope, $timeout, $http) {
+        $http.defaults.useXDomain = true;
         $scope.cards = [];
         $scope.boards = [];
         $scope.quadroDefault= "q65dArv6";
@@ -25,16 +26,11 @@
             //     $scope.quantity = data;
             // });
 
-
             $.ajax({
                 type: "GET",
                 data: JSON.stringify(data),
                 dataType: 'json',
                 processData: true,
-                async: false,
-                headers: {
-                    'Access-Control-Allow-Origin': '*'
-                },
                 url: "http://api.sundevs.com/api/v1/cards/quantity",
                 contentType: "application/json",
                 success: function(data) {
