@@ -17,8 +17,16 @@
         //     res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept');
         //     res.send(200);
         // });
+        // $scope.get = function() {
+        //     $http.get("http://localhost:4567/movie").success(function(result) {
+        //         alert("Success", result);
+        //         $scope.resultGet = result;
+        //     }).error(function() {
+        //         alert("error");
+        //     });
+        // };
         $scope.reload = function () {
-
+            //
             // $http({
             //     method: 'GET',
             //     url: 'http://api.sundevs.com/api/v1/cards/quantity'
@@ -44,11 +52,8 @@
             //     res.send(200);
             //     $scope.quantity = data;
             // });
-            $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data,req, res) {
-                res.header('Access-Control-Allow-Origin', "*");
-                res.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
-                res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept');
-                res.send(200);
+            $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data) {
+
                 if (data.card != null){
                     var audio = new Audio('sound.mp3');
                     audio.play();
@@ -77,11 +82,10 @@
         };
         $scope.reload();
         $scope.urlsimgs= "&authtoken=6a701202eb76ebf85132b6ba39f6831d";
-        $scope.listOfCustomers = null;
 
-        $http.get('http://people.zoho.com/people/api/forms/P_TimesheetJobsList/getRecords?authtoken=6a701202eb76ebf85132b6ba39f6831d')
+        $http.get('http://localhost:4567/api')
             .success(function (data) {
-                $scope.listOfCustomers = data.response.result;
+                $scope.listOfCustomers = data.response;
 
             }).error(function () {
             });
@@ -184,9 +188,5 @@
         $scope.randomStacked();
     }]);
 
-    app.config(['$httpProvider', function($httpProvider) {
-        $httpProvider.defaults.useXDomain = true;
-        delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    }]);
 
 })();

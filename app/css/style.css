@@ -2,28 +2,50 @@ body{
     background-color: #222222;
 }
 .ImgProject img{
-    width: 80%;
+    float: right;
+    margin-right: -70px;
+    width: 80px;
+    margin-top: 10px;
+    border-radius: 250px;
 }
-
+.text-circle{
+    margin-top: -190px;
+    font-size: 35px;
+}
+.TitleProject{
+    margin-left: -50px;
+}
 .TitleProject p{
     font-size: 8rem;
     color: rgba(255,255,255, 0.5);
     margin-top: -10px;
 }
 
+.BugsProject{
+    margin-top: 40px;
+}
+
 .BugsProject p{
-    margin-top: 30px;
     font-size: 40px;
-    text-align: left;
-    color: rgba(255,255,255, 0.5);
+    color: rgba(0,0,0, 0.5);
+}
+.BugsProject span{
+    font-size: 50px;
+    color: rgba(0,0,0, 0.5);
+}
+.bugscontent{
+    margin-top: 75px;
+    height: 220px;
+    width: 220px;
+    text-align: center;
+    background-color: #e7e7e7;
+    border-radius: 150px 150px;
+
 }
 
 .ProgressProject{
-    margin-top: 8%;
+    margin-top: 6%;
     background-color: transparent;
-}
-.barr2{
-    margin-top: -2%;
 }
 .DaysAll p{
     font-size: 20px;
@@ -31,7 +53,7 @@ body{
     color: rgba(255,255,255, 0.5);
 }
 .slider-carousel{
-    margin-top: 5%;
+    margin-top: 2%;
 }
 .bar{
     height: 90px;
@@ -43,12 +65,10 @@ body{
 .indicador{
     margin-top: 3%;
 }
-.CantBugs, .Title{
+.CantBugs{
     text-align: center;
 }
-.Title p{
-    font-size: 60px;
-}
+
 .indicadorver{
     margin-left: -45px;
     margin-top: 95px;
@@ -96,4 +116,15 @@ body{
 #mesfin{
     font-size: 25px;
     margin-top: -20px;
+}
+.circle-bar{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.dayprogress{
+    margin-top: 30px;
+    font-size: 35px;
+}
+.barprogress{
+    margin-bottom: 25px;
 }
