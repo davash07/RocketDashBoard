@@ -17,18 +17,7 @@
         $scope.parseInt = parseInt;
         $scope.CurrentDate = new Date();
         var token = '7624c37e41770770d71000f7f2dc13b9b1647cbb6bbe1c1ff28e214a0564fb5b';
-        $.ajax({
-            type: "GET",
-            data: JSON.stringify(data),
-            dataType: 'json',
-            processData: true,
-            url: "https://api.trello.com/1/tokens/c4a90c8735f980c1257a90a8c205c03f58c971dc21aade2c3f6b66de1f6e8d1c/webhooks/?key=c8b7f2e9a6f82f88b47f767ed2122822",
-            contentType: "application/json",
-            success: function(data) {
-                $scope.dats = data;
-                alert(data);
-            }
-        });
+
         // $scope.get = function() {
         //     $http.get("http://localhost:4567/movie").success(function(result) {
         //         alert("Success", result);
