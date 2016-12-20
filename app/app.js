@@ -8,8 +8,10 @@ angular.module('app', [
     'app.view',
     'app.version'
 ]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+config(function($httpProvider) {
+    //Enable cross domain calls
+    $httpProvider.defaults.useXDomain = true;
 
-  $routeProvider.otherwise({redirectTo: '/view/view.html'});
-}]);
+    //Remove the header used to identify ajax call  that would prevent CORS from working
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+});

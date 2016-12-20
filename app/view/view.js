@@ -1,6 +1,13 @@
 (function(){
     var app = angular.module('app',[
         'ui.bootstrap']);
+    app.config(function($httpProvider) {
+        //Enable cross domain calls
+        $httpProvider.defaults.useXDomain = true;
+
+        //Remove the header used to identify ajax call  that would prevent CORS from working
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    });
     app.controller('AppCtrl', ['$scope','$timeout', '$http', function($scope, $timeout, $http) {
         $http.defaults.useXDomain = true;
         $scope.cards = [];
