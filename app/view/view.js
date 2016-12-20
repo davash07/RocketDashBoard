@@ -1,13 +1,14 @@
 (function(){
     var app = angular.module('app',[
         'ui.bootstrap']);
-    app.config(function($httpProvider) {
-        //Enable cross domain calls
+    app.config(['$httpProvider', function($httpProvider) {
         $httpProvider.defaults.useXDomain = true;
-
-        //Remove the header used to identify ajax call  that would prevent CORS from working
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    });
+        $httpProvider.defaults.headers.common = {};
+        $httpProvider.defaults.headers.post = {};
+        $httpProvider.defaults.headers.put = {};
+        $httpProvider.defaults.headers.patch = {};
+    }]);
     app.controller('AppCtrl', ['$scope','$timeout', '$http', function($scope, $timeout, $http) {
         $http.defaults.useXDomain = true;
         $scope.cards = [];
@@ -16,14 +17,18 @@
         $scope.parseInt = parseInt;
         $scope.CurrentDate = new Date();
         var token = '7624c37e41770770d71000f7f2dc13b9b1647cbb6bbe1c1ff28e214a0564fb5b';
-        // $.ajax.get('https://api.trello.com/1/tokens/c4a90c8735f980c1257a90a8c205c03f58c971dc21aade2c3f6b66de1f6e8d1c/webhooks/?key=c8b7f2e9a6f82f88b47f767ed2122822')
-        // .success(function (data, req, res) {
-        //     $scope.datos = data;
-        //     res.header('Access-Control-Allow-Origin', "*");
-        //     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
-        //     res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept');
-        //     res.send(200);
-        // });
+        $.ajax({
+            type: "GET",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            processData: true,
+            url: "https://api.trello.com/1/tokens/c4a90c8735f980c1257a90a8c205c03f58c971dc21aade2c3f6b66de1f6e8d1c/webhooks/?key=c8b7f2e9a6f82f88b47f767ed2122822",
+            contentType: "application/json",
+            success: function(data) {
+                $scope.dats = data;
+                alert(data);
+            }
+        });
         // $scope.get = function() {
         //     $http.get("http://localhost:4567/movie").success(function(result) {
         //         alert("Success", result);
@@ -99,9 +104,6 @@
         $http.get('apizoho.json').success(function(data) {
             $scope.info = data;
         });
-        $scope.ver=function(value){
-            $scope.app=value;
-        };
         $scope.myInterval = 5000;
         $scope.noWrapSlides = false;
         $scope.active = 0;
