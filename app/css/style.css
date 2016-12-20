@@ -92,7 +92,7 @@ body{
 }
 .text-reto{
     margin-top:-70px;
-    color: #e7e7e7;
+    color: rgba(0,0, 0, 0.7);
 }
 #diareto {
     font-size: 35px;
