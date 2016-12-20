@@ -38,7 +38,7 @@
             $.ajax({
                 type: "GET",
                 data: JSON.stringify(data),
-                dataType: 'json',
+                dataType: 'jsonp',
                 processData: true,
                 url: "http://api.sundevs.com/api/v1/cards/quantity",
                 contentType: "application/json",
