@@ -47,7 +47,7 @@
                     audio.play();
                     if (data.card.members[0] != "undefined"){
 
-                        if (data.card.members[0].size() == 1){
+                        if (data.card.members[0].length() == 1){
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
@@ -63,7 +63,7 @@
                             );
                         }
 
-                        if (data.card.members[0].size() == 2){
+                        if (data.card.members[0].length() == 2){
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
@@ -79,7 +79,7 @@
                             );
                         }
 
-                        if (data.card.members[0].size() == 3){
+                        if (data.card.members[0].length() == 3){
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
@@ -95,7 +95,7 @@
                             );
                         }
 
-                        if (data.card.members[0].size() == 4){
+                        if (data.card.members[0].length() == 4){
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
@@ -111,7 +111,7 @@
                             );
                         }
 
-                        if (data.card.members[0].size() == 5){
+                        if (data.card.members[0].length() == 5){
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
