@@ -19,13 +19,6 @@
         //     });
         // };
         $scope.reload = function () {
-            //
-            // $http({
-            //     method: 'GET',
-            //     url: 'http://api.sundevs.com/api/v1/cards/quantity'
-            // }).success(function(data){
-            //     $scope.quantity = data;
-            // });
 
 
             $.ajax({
@@ -46,25 +39,7 @@
                     console.log('Error ' + xhr.responseText);
                 }
             });
-            // $.ajax({
-            //     type: "GET",
-            //     data: JSON.stringify(data),
-            //     dataType: 'jsonp',
-            //     // processData: true,
-            //     url: url,
-            //     contentType: "application/jsonp",
-            //     crossDomain: true,
-            //     success: function(data) {
-            //         $scope.quantity = data;
-            //     }
-            // });
-            // $http.get('http://api.sundevs.com/api/v1/cards/quantity').success(function (data, req, res) {
-            //     res.header('Access-Control-Allow-Origin', "*");
-            //     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
-            //     res.header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept');
-            //     res.send(200);
-            //     $scope.quantity = data;
-            // });
+
             $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data) {
 
                 if (data.card != null){
@@ -95,13 +70,6 @@
         };
         $scope.reload();
         $scope.urlsimgs= "&authtoken=6a701202eb76ebf85132b6ba39f6831d";
-
-        $http.get('http://localhost:4567/api')
-            .success(function (data) {
-                $scope.listOfCustomers = data.response;
-
-            }).error(function () {
-            });
         $http.get('apizoho.json').success(function(data) {
             $scope.info = data;
         });
