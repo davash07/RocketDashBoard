@@ -1,16 +1,8 @@
 (function(){
     var app = angular.module('app',[
         'ui.bootstrap']);
-    app.config(['$httpProvider', function($httpProvider) {
-        $httpProvider.defaults.useXDomain = true;
-        delete $httpProvider.defaults.headers.common['X-Requested-With'];
-        $httpProvider.defaults.headers.common = {};
-        $httpProvider.defaults.headers.post = {};
-        $httpProvider.defaults.headers.put = {};
-        $httpProvider.defaults.headers.patch = {};
-    }]);
+
     app.controller('AppCtrl', ['$scope','$timeout', '$http', function($scope, $timeout, $http) {
-        $http.defaults.useXDomain = true;
         $scope.cards = [];
         $scope.boards = [];
         $scope.quadroDefault= "q65dArv6";
@@ -35,17 +27,37 @@
             //     $scope.quantity = data;
             // });
 
+
             $.ajax({
-                type: "GET",
-                data: JSON.stringify(data),
-                dataType: 'jsonp',
-                processData: true,
-                url: "http://api.sundevs.com/api/v1/cards/quantity",
-                contentType: "application/json",
-                success: function(data) {
+                type: 'GET',
+                url: 'http://api.sundevs.com/api/v1/cards/quantity',
+                dataType: 'json',
+                xhrFields: {
+                    withCredentials: false
+                },
+                headers: {
+                    "Accept" : "application/json; charset=utf-8",
+                    "Access-Control-Allow-Origin" : "*"
+                },
+                success: function (data) {
                     $scope.quantity = data;
+                },
+                error: function (xhr) {
+                    console.log('Error ' + xhr.responseText);
                 }
             });
+            // $.ajax({
+            //     type: "GET",
+            //     data: JSON.stringify(data),
+            //     dataType: 'jsonp',
+            //     // processData: true,
+            //     url: url,
+            //     contentType: "application/jsonp",
+            //     crossDomain: true,
+            //     success: function(data) {
+            //         $scope.quantity = data;
+            //     }
+            // });
             // $http.get('http://api.sundevs.com/api/v1/cards/quantity').success(function (data, req, res) {
             //     res.header('Access-Control-Allow-Origin', "*");
             //     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
