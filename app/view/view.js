@@ -51,7 +51,7 @@
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
-                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname ,
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes'.concat(data.card.members[0].fullname),
                                 timer: 10000
                             }).then(
                                 function () {},
@@ -128,21 +128,19 @@
                         }
 
                     }else{
-                        if (data.card.members[0].size() == 5){
-                            swal({
-                                title: data.card.name_board,
-                                type: 'error',
-                                text: 'Se ha incluido un nuevo bug',
-                                timer: 10000
-                            }).then(
-                                function () {},
-                                function (dismiss) {
-                                    if (dismiss === 'timer') {
-                                        console.log('I was closed by the timer')
-                                    }
+                        swal({
+                            title: data.card.name_board,
+                            type: 'error',
+                            text: 'Se ha incluido un nuevo bug',
+                            timer: 10000
+                        }).then(
+                            function () {},
+                            function (dismiss) {
+                                if (dismiss === 'timer') {
+                                    console.log('I was closed by the timer')
                                 }
-                            );
-                        }
+                            }
+                        );
                     }
 
                     //  alert('dasdas');
