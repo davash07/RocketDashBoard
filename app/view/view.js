@@ -10,16 +10,48 @@
         $scope.CurrentDate = new Date();
         var token = '7624c37e41770770d71000f7f2dc13b9b1647cbb6bbe1c1ff28e214a0564fb5b';
 
-        // $scope.get = function() {
-        //     $http.get("http://localhost:4567/movie").success(function(result) {
-        //         alert("Success", result);
-        //         $scope.resultGet = result;
-        //     }).error(function() {
-        //         alert("error");
-        //     });
-        // };
         $scope.reload = function () {
+                // $.ajax({
+                //    type:'GET',
+                //     url: 'https://people.zoho.com/people/api/forms/P_TimesheetJobsList/getRecords?authtoken=6a701202eb76ebf85132b6ba39f6831d',
+                //     dataType: 'json',
+                //     xhrFields: {
+                //         withCredentials: false
+                //     },
+                //     headers: {
+                //         "Accept" : "application/json; charset=utf-8",
+                //         "Access-Control-Allow-Origin" : "*"
+                //     },
+                //     success: function (data) {
+                //         $scope.resultGet = data.response.result;
+                //         $scope.getEmployeeName = function () {
+                //             for (var i = 0; i < data.result.length; i++) {
+                //                 // if ($scope.result[i].Project_Name === empId) {
+                //                 $scope.Zoho = data.result[i].Project_Name;
+                //                 // }
+                //
+                //             }
+                //         };
+                //     },
+                //     error: function (xhr) {
+                //         alert('Error ' + xhr.responseText);
+                //     }
+                //
+                // });
+                //
 
+                // $http.get("https://people.zoho.com/people/api/forms/P_TimesheetJobsList/getRecords?authtoken=6a701202eb76ebf85132b6ba39f6831d")
+                //     .success(function(data) {
+                //     $scope.resultGet = data.response;
+                //     alert(data.response.result);
+                //
+                //         // for (var i = 0, l = data.response.result.length; i < l; i++) {
+                //         //     alert(data.response.result.id[i] + i + "sada");
+                //         // }
+                //
+                // }).error(function() {
+                //     alert('fallo');
+                // });
 
             $.ajax({
                 type: 'GET',
@@ -39,19 +71,22 @@
                     console.log('Error ' + xhr.responseText);
                 }
             });
-
+            // file:///Users/devios/WebstormProjects/RocketDashBoard/app/view/view.html
             $http.get('http://api.sundevs.com/api/v1/cards/show').success(function (data) {
 
                 if (data.card != null){
                     var audio = new Audio('sound.mp3');
                     audio.play();
-                    if (data.card.members[0] != "undefined"){
+                    alert("nm," + data.card.members.length);
+                    if (data.card.members != null){
+                        alert("ACA" + data.card.members.length);
 
-                        if (data.card.members[0].length() == 1){
+                        if (data.card.members.length == 1){
+                            alert("1");
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
-                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes'.concat(data.card.members[0].fullname),
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes:' + '<br>' + data.card.members[0].fullname,
                                 timer: 10000
                             }).then(
                                 function () {},
@@ -63,11 +98,11 @@
                             );
                         }
 
-                        if (data.card.members[0].length() == 2){
+                        if (data.card.members.length == 2){
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
-                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname + data.card.members[1].fullname ,
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes: ' + '<br>' + data.card.members[0].fullname + '<br>' + data.card.members[1].fullname ,
                                 timer: 10000
                             }).then(
                                 function () {},
@@ -79,11 +114,11 @@
                             );
                         }
 
-                        if (data.card.members[0].length() == 3){
+                        if (data.card.members.length == 3){
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
-                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname + data.card.members[1].fullname + data.card.members[2].fullname ,
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes:' + '<br>' + data.card.members[0].fullname + '<br>' + data.card.members[1].fullname + '<br>' + data.card.members[2].fullname ,
                                 timer: 10000
                             }).then(
                                 function () {},
@@ -95,11 +130,11 @@
                             );
                         }
 
-                        if (data.card.members[0].length() == 4){
+                        if (data.card.members.length == 4){
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
-                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname + data.card.members[1].fullname + data.card.members[2].fullname + data.card.members[3].fullname ,
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes:' + '<br>' + data.card.members[0].fullname + '<br>' + data.card.members[1].fullname + '<br>' + data.card.members[2].fullname + '<br>' + data.card.members[3].fullname ,
                                 timer: 10000
                             }).then(
                                 function () {},
@@ -111,11 +146,11 @@
                             );
                         }
 
-                        if (data.card.members[0].length() == 5){
+                        if (data.card.members.length == 5){
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
-                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname + data.card.members[1].fullname + data.card.members[2].fullname + data.card.members[3].fullname + data.card.members[4].fullname ,
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes:' + '<br>' + data.card.members[0].fullname + '<br>' + data.card.members[1].fullname + '<br>' + data.card.members[2].fullname + '<br>' + data.card.members[3].fullname + '<br>' + data.card.members[4].fullname ,
                                 timer: 10000
                             }).then(
                                 function () {},
@@ -151,7 +186,7 @@
 
             $timeout(function(){
                 $scope.reload();
-            },3000)
+            },15000)
         };
         $scope.reload();
         $scope.urlsimgs= "&authtoken=6a701202eb76ebf85132b6ba39f6831d";
