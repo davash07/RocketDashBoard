@@ -45,19 +45,106 @@
                 if (data.card != null){
                     var audio = new Audio('sound.mp3');
                     audio.play();
-                    swal({
-                        title: data.card.name_board,
-                        type: 'error',
-                        text: 'Se ha incluido un nuevo bug' ,
-                        timer: 10000
-                    }).then(
-                        function () {},
-                        function (dismiss) {
-                            if (dismiss === 'timer') {
-                                console.log('I was closed by the timer')
-                            }
+                    if (data.card.members[0] != "undefined"){
+
+                        if (data.card.members[0].size() == 1){
+                            swal({
+                                title: data.card.name_board,
+                                type: 'error',
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname ,
+                                timer: 10000
+                            }).then(
+                                function () {},
+                                function (dismiss) {
+                                    if (dismiss === 'timer') {
+                                        console.log('I was closed by the timer')
+                                    }
+                                }
+                            );
                         }
-                    );
+
+                        if (data.card.members[0].size() == 2){
+                            swal({
+                                title: data.card.name_board,
+                                type: 'error',
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname + data.card.members[1].fullname ,
+                                timer: 10000
+                            }).then(
+                                function () {},
+                                function (dismiss) {
+                                    if (dismiss === 'timer') {
+                                        console.log('I was closed by the timer')
+                                    }
+                                }
+                            );
+                        }
+
+                        if (data.card.members[0].size() == 3){
+                            swal({
+                                title: data.card.name_board,
+                                type: 'error',
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname + data.card.members[1].fullname + data.card.members[2].fullname ,
+                                timer: 10000
+                            }).then(
+                                function () {},
+                                function (dismiss) {
+                                    if (dismiss === 'timer') {
+                                        console.log('I was closed by the timer')
+                                    }
+                                }
+                            );
+                        }
+
+                        if (data.card.members[0].size() == 4){
+                            swal({
+                                title: data.card.name_board,
+                                type: 'error',
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname + data.card.members[1].fullname + data.card.members[2].fullname + data.card.members[3].fullname ,
+                                timer: 10000
+                            }).then(
+                                function () {},
+                                function (dismiss) {
+                                    if (dismiss === 'timer') {
+                                        console.log('I was closed by the timer')
+                                    }
+                                }
+                            );
+                        }
+
+                        if (data.card.members[0].size() == 5){
+                            swal({
+                                title: data.card.name_board,
+                                type: 'error',
+                                text: 'Se ha incluido un nuevo bug con los siguientes integrantes' + data.card.members[0].fullname + data.card.members[1].fullname + data.card.members[2].fullname + data.card.members[3].fullname + data.card.members[4].fullname ,
+                                timer: 10000
+                            }).then(
+                                function () {},
+                                function (dismiss) {
+                                    if (dismiss === 'timer') {
+                                        console.log('I was closed by the timer')
+                                    }
+                                }
+                            );
+                        }
+
+                    }else{
+                        if (data.card.members[0].size() == 5){
+                            swal({
+                                title: data.card.name_board,
+                                type: 'error',
+                                text: 'Se ha incluido un nuevo bug',
+                                timer: 10000
+                            }).then(
+                                function () {},
+                                function (dismiss) {
+                                    if (dismiss === 'timer') {
+                                        console.log('I was closed by the timer')
+                                    }
+                                }
+                            );
+                        }
+                    }
+
                     //  alert('dasdas');
                     //  alert( data.card.members[0].fullname);
                     // // alert();alert
