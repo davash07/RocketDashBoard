@@ -2,23 +2,20 @@ body{
     background-color: #222222;
 }
 .ImgProject img{
-    float: right;
-    margin-right: -50px;
+    margin-top: -100px;
+    margin-left:150px;
     width: 80px;
-    margin-top: 10px;
     border-radius: 250px;
 }
 .text-circle{
     margin-top: -190px;
     font-size: 35px;
 }
-.TitleProject{
-    margin-left: -50px;
-}
+
 .TitleProject p{
+    margin-left: 60px;
     font-size: 8rem;
     color: rgba(255,255,255, 0.5);
-    margin-top: -10px;
 }
 
 .BugsProject{
@@ -34,17 +31,22 @@ body{
     color: rgba(0,0,0, 0.5);
 }
 .bugscontent{
+    text-align: center;
     margin-top: 75px;
     height: 220px;
     width: 220px;
-    text-align: center;
     background-color: #e7e7e7;
     border-radius: 150px 150px;
 
 }
 
 .ProgressProject{
-    margin-top: 6%;
+    margin-top: -9.7%;
+    background-color: transparent;
+}
+.ProgressProjecttwo{
+    float: inherit;
+    margin-top:6%;
     background-color: transparent;
 }
 .DaysAll p{
@@ -83,6 +85,7 @@ body{
     font-size: 35px;
 }
 #mesinicio{
+    margin-top: 10px;
     font-size: 25px;
 }
 .indicadornar{
@@ -91,13 +94,14 @@ body{
     margin-top: -100px;
 }
 .text-reto{
-    margin-top:-70px;
+    margin-top:-75px;
     color: rgba(0,0, 0, 0.7);
 }
 #diareto {
     font-size: 35px;
 }
 #mesreto{
+    margin-top: 5px;
     font-size: 25px;
 }
 .indicadorro{
@@ -115,7 +119,7 @@ body{
 }
 #mesfin{
     font-size: 25px;
-    margin-top: -20px;
+    margin-top: -15px;
 }
 .circle-bar{
     margin-left: 20%;
@@ -127,4 +131,16 @@ body{
 }
 .barprogress{
     margin-bottom: 25px;
+}
+
+@media screen and (max-width:1366px){
+    body{
+        justify-content: center;
+        padding: 100% auto;
+        align-items: center;
+    }
+
+}
+@media (min-width: 700px) {
+
 }
