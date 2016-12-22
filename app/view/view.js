@@ -66,9 +66,6 @@
                 },
                 success: function (data) {
                     $scope.quantity = data;
-                },
-                error: function (xhr) {
-                    console.log('Error ' + xhr.responseText);
                 }
             });
             // file:///Users/devios/WebstormProjects/RocketDashBoard/app/view/view.html
@@ -77,12 +74,8 @@
                 if (data.card != null){
                     var audio = new Audio('sound.mp3');
                     audio.play();
-                    alert("nm," + data.card.members.length);
-                    if (data.card.members != null){
-                        alert("ACA" + data.card.members.length);
-
+                    if (data.card.members != ""){
                         if (data.card.members.length == 1){
-                            alert("1");
                             swal({
                                 title: data.card.name_board,
                                 type: 'error',
@@ -161,8 +154,8 @@
                                 }
                             );
                         }
-
                     }else{
+                        alert('una alerta');
                         swal({
                             title: data.card.name_board,
                             type: 'error',
