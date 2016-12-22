@@ -52,18 +52,18 @@
                 // }).error(function() {
                 //     alert('fallo');
                 // });
-            var data = { name_application: "name app", model_id: boardid };
-            $.ajax({
-                type: "POST",
-                data: JSON.stringify(data),
-                url: "http://api.sundevs.com/api/v1/trellomodels/create",
-                contentType: "application/json",
-                success: function(result) {
-                    if (result.success == true) {
-                        alert("board registrada");
-                    }
-                }
-            });
+            // var data = { name_application: "name app", model_id: boardid };
+            // $.ajax({
+            //     type: "POST",
+            //     data: JSON.stringify(data),
+            //     url: "http://api.sundevs.com/api/v1/trellomodels/create",
+            //     contentType: "application/json",
+            //     success: function(result) {
+            //         if (result.success == true) {
+            //             alert("board registrada");
+            //         }
+            //     }
+            // });
             $.ajax({
                 type: 'GET',
                 url: 'http://api.sundevs.com/api/v1/cards/quantity',
