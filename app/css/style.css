@@ -1,8 +1,5 @@
 body{
     background-color: #222222;
-    position: relative;
-    width: 100%;
-    height: 100%;
 }
 
 body:before {
@@ -13,7 +10,7 @@ body:before {
 
 .ImgProject img{
     margin-top: -100px;
-    margin-left:150px;
+    margin-left:450px;
     width: 80px;
     border-radius: 250px;
 }
@@ -53,7 +50,7 @@ body:before {
 }
 
 .ProgressProject{
-    margin-top: -9.7%;
+    margin-top: -6%;
     background-color: transparent;
 }
 .ProgressProjecttwo{
@@ -144,53 +141,59 @@ body:before {
 .barprogress{
     margin-bottom: 25px;
 }
-
-@media screen and (max-width:1366px){
-    body{
-        position: relative;
-        width: 100%;
-    }
-
-    body:before {
-        display: block;
-        padding-top: 100%; /*para una relación 1:1*/
-    }
-
+.container-fluidtwo {
+    padding-right: 75px;
+    padding-left: 75px;
+    margin-right: auto;
+    margin-left: auto;
 }
-@media (min-width: 1200px) {
-    body{
-        position: relative;
-        width: 100%;
-    }
 
-    body:before {
-        display: block;
-        padding-top: 100%; /*para una relación 1:1*/
-    }
+/*@media screen and (max-width:1366px){*/
+    /*body{*/
+        /*position: relative;*/
+        /*width: 100%;*/
+    /*}*/
 
-}
-@media screen and (max-width:1000px){
-    body{
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
+    /*body:before {*/
+        /*display: block;*/
+        /*padding-top: 100%; !*para una relación 1:1*!*/
+    /*}*/
 
-    body:before {
-        display: block;
-        padding-top: 100%; /*para una relación 1:1*/
-    }
+/*}*/
+/*@media (min-width: 1200px) {*/
+    /*body{*/
+        /*position: relative;*/
+        /*width: 100%;*/
+    /*}*/
 
-}
-@media (min-width: 700px) {
-    body{
-        position: relative;
-        width: 100%;
-    }
+    /*body:before {*/
+        /*display: block;*/
+        /*padding-top: 100%; !*para una relación 1:1*!*/
+    /*}*/
 
-    body:before {
-        display: block;
-        padding-top: 100%; /*para una relación 1:1*/
-    }
+/*}*/
+/*@media screen and (max-width:1000px){*/
+    /*body{*/
+        /*position: relative;*/
+        /*width: 100%;*/
+        /*height: 100%;*/
+    /*}*/
 
-}
+    /*body:before {*/
+        /*display: block;*/
+        /*padding-top: 100%; !*para una relación 1:1*!*/
+    /*}*/
+
+/*}*/
+/*@media (min-width: 700px) {*/
+    /*body{*/
+        /*position: relative;*/
+        /*width: 100%;*/
+    /*}*/
+
+    /*body:before {*/
+        /*display: block;*/
+        /*padding-top: 100%; !*para una relación 1:1*!*/
+    /*}*/
+
+/*}*/
