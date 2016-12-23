@@ -9,9 +9,9 @@ body:before {
 }
 
 .ImgProject img{
-    margin-top: -100px;
-    margin-left:450px;
-    width: 80px;
+    margin-top: -140px;
+    margin-left:350px;
+    width: 90px;
     border-radius: 250px;
 }
 .text-circle{
@@ -21,7 +21,7 @@ body:before {
 
 .TitleProject p{
     margin-left: 60px;
-    font-size: 8rem;
+    font-size: 12rem;
     color: rgba(255,255,255, 0.5);
 }
 
