@@ -147,53 +147,197 @@ body:before {
     margin-right: auto;
     margin-left: auto;
 }
+.slider-carousel{
+    margin-top: 5%
+}
 
-/*@media screen and (max-width:1366px){*/
-    /*body{*/
-        /*position: relative;*/
-        /*width: 100%;*/
-    /*}*/
+@media screen and (min-width: 1450px){
+    .ImgProject img{
+        margin-left: 20%;
+        margin-top: -115px;
+    }
+    .TitleProject p{
+        margin-left: 60px;
+        font-size: 9rem;
+        color: rgba(255,255,255, 0.5);
+    }
+}
+@media screen and (max-width:1366px){
+    .ImgProject img{
+        margin-top: -115px;
+        margin-left:150px;
+        width: 90px;
+        border-radius: 250px;
+    }
+    .TitleProject p{
+        margin-left: 60px;
+        font-size: 9rem;
+        color: rgba(255,255,255, 0.5);
+    }
+    .ProgressProject{
+        margin-top: -9.8%;
+    }
+    .ProgressProjecttwo{
+        margin-top:7%;
+    }
+    .slider-carousel{
+        margin-top: 0%;
+    }
 
-    /*body:before {*/
-        /*display: block;*/
-        /*padding-top: 100%; !*para una relación 1:1*!*/
-    /*}*/
 
-/*}*/
-/*@media (min-width: 1200px) {*/
-    /*body{*/
-        /*position: relative;*/
-        /*width: 100%;*/
-    /*}*/
+}
+@media screen and (max-width:1200px){
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .ImgProject img{
+        margin-top: -115px;
+        margin-left:150px;
+        width: 90px;
+        border-radius: 250px;
+    }
+    .TitleProject p{
+        margin-left: 60px;
+        font-size: 9rem;
+        color: rgba(255,255,255, 0.5);
+    }
+    .ProgressProject{
+        margin-top: -9.8%;
+    }
+    .ProgressProjecttwo{
+        margin-top:7%;
+    }
+    .slider-carousel{
+        margin-top: 0%;
+    }
+    .circle-bar{
+        padding-left:15%;
+        margin-top: 0%;
+    }
+    .bugs{
+        margin-top: -6%;
+        padding-left:60%;
+    }
+    .barprogress{
+        margin-bottom: 9%;
+    }
 
-    /*body:before {*/
-        /*display: block;*/
-        /*padding-top: 100%; !*para una relación 1:1*!*/
-    /*}*/
+}
+@media screen and (max-width: 1200px) {
+    .ImgProject img{
+        margin-top: -110px;
+        margin-left:10%;
+        width: 90px;
+        border-radius: 250px;
+    }
+    .TitleProject p{
+        margin-left: 10%;
+        font-size: 8rem;
+        color: rgba(255,255,255, 0.5);
+    }
+    .ProgressProject{
+        margin-top: -11%;
+    }
+    .ProgressProjecttwo{
+        margin-top:7%;
+    }
 
-/*}*/
-/*@media screen and (max-width:1000px){*/
-    /*body{*/
-        /*position: relative;*/
-        /*width: 100%;*/
-        /*height: 100%;*/
-    /*}*/
+}
 
-    /*body:before {*/
-        /*display: block;*/
-        /*padding-top: 100%; !*para una relación 1:1*!*/
-    /*}*/
+@media screen and (max-width: 1000px) {
+    .ImgProject img{
+        margin-left:5%;
+    }
+    .TitleProject p{
+        margin-left: 90px;
+        font-size: 8rem;
+    }
+    .ProgressProject{
+        margin-top: -15%;
+    }
+    .ProgressProjecttwo{
+        margin-top:7%;
+    }
+    .slider-carousel{
+        margin-top: 0%;
+    }
+    .circle-bar{
+        padding-left:15%;
+        margin-top: 0%;
+    }
+    .bugs{
+        margin-top: -8%;
+        padding-left:60%;
+    }
+    .barprogress{
+        margin-bottom: 12%;
+    }
 
-/*}*/
-/*@media (min-width: 700px) {*/
-    /*body{*/
-        /*position: relative;*/
-        /*width: 100%;*/
-    /*}*/
+}
 
-    /*body:before {*/
-        /*display: block;*/
-        /*padding-top: 100%; !*para una relación 1:1*!*/
-    /*}*/
+@media screen and (max-width: 800px) {
 
-/*}*/
+    .ImgProject img{
+        margin-top: -210px;
+        width: 190px;
+        margin-left:12%;
+    }
+    .TitleProject p{
+        margin-left: 290px;
+        font-size: 8rem;
+    }
+    .ProgressProject{
+        margin-top: -17%;
+    }
+    .ProgressProjecttwo{
+        margin-top:15%;
+    }
+    .slider-carousel{
+        margin-top: 0%;
+    }
+    .circle-bar{
+        padding-left:15%;
+        margin-top: 0%;
+    }
+    .bugs{
+        margin-top: -8%;
+        padding-left:60%;
+    }
+    .barprogress{
+        margin-bottom: 12%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .ImgProject img{
+        margin-top:0%;
+        width: 190px;
+        margin-right: 10%;
+    }
+    .ImgProject{
+        text-align: center;
+    }
+    .TitleProject p{
+        font-size: 8rem;
+        margin-left: 0%;
+    }
+    .ProgressProject{
+        margin-top: -22%;
+    }
+    .ProgressProjecttwo{
+        margin-top:18%;
+    }
+    .barprogress{
+        margin-bottom: 15%;
+    }
+    .circle-bar{
+        padding-left:8%;
+        margin-top: 0%;
+    }
+    .bugs{
+        margin-top: -10%;
+        padding-left:60%;
+    }
+}
