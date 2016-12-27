@@ -341,3 +341,10 @@ body:before {
         padding-left:60%;
     }
 }
+
+.colorbarsuccess{
+    background-color: #4cae4c;
+}
+.colorbardanger{
+    background-color: #761c19;
+}

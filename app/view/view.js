@@ -3,6 +3,7 @@
         'ui.bootstrap']);
 
     app.controller('AppCtrl', ['$scope','$timeout', '$http', function($scope, $timeout, $http) {
+        $scope.color='ok';
         $scope.cards = [];
         $scope.boards = [];
         $scope.quadroDefault= "q65dArv6";
